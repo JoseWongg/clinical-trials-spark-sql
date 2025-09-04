@@ -15,8 +15,8 @@ clinical-trials-spark-sql/
 ├── notebooks/
 │   ├── ClinicalTrials_SQL.html     # Databricks HTML export (open in browser)
 │   └── ClinicalTrials_SQL.dbc      # Databricks archive (import into workspace)
-├── docs/
-│   └── project_context_clinical_trials.pdf        # Context
+├── data/
+│   └── clinical_trials.csv         # Dataset
 ├── LICENSE
 └── README.md
 ```
@@ -32,15 +32,33 @@ This project is provided in two formats for convenience:
   - Average trial durations  
   - Yearly trend of completed trials related to diabetes (with visualisation)  
 - Clean, well-documented SQL for readability and reproducibility.  
-- A concise [project context document](docs/project_context_clinical_trials.pdf) summarising background, objectives, and business value.  
+- Dataset
 
+
+## Dataset
+
+This project uses a **clinical trials dataset** (CSV export, 196 MB).  
+
+- The full dataset is included in this repository via [Git LFS](https://git-lfs.com/).  
+- When you clone the repository, GitHub automatically manages downloading the large file.  
+
+### Using the dataset in Databricks
+1. In Databricks, go to **Data → Create → Add Data → Upload File**.  
+2. Upload `data/clinical_trials.csv` from this repository.  
+3. Set the target path (e.g., `/FileStore/clinical_trials.csv`).  
+4. Load into Spark:  
+```
+   python
+   df = spark.read.option("header", "true").csv("/FileStore/clinical_trials.csv")
+   df.show(5)
+```
 
 ## How to Use
 ### Option 1: Quick View  
 Open the **HTML file** in any web browser to explore the notebook and results.
 
 ### Option 2: Run in Databricks  
-1. Log into your Databricks workspace.  
+1. Log in to your Databricks workspace.  
 2. Import `notebooks/ClinicalTrials_SQL.dbc`.  
 3. Run the cells to reproduce the analysis.  
 
