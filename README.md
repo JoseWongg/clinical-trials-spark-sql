@@ -12,11 +12,11 @@ It focuses on:
 ## Repository Structure
 ```
 clinical-trials-spark-sql/
+├── data/
+│   └── clinical_trials.csv         # Dataset
 ├── notebooks/
 │   ├── ClinicalTrials_SQL.html     # Databricks HTML export (open in browser)
 │   └── ClinicalTrials_SQL.dbc      # Databricks archive (import into workspace)
-├── data/
-│   └── clinical_trials.csv         # Dataset
 ├── LICENSE
 └── README.md
 ```
