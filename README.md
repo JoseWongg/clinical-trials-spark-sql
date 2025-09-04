@@ -15,8 +15,8 @@ clinical-trials-spark-sql/
 ├── data/
 │   └── clinical_trials.csv         # Dataset
 ├── notebooks/
-│   ├── ClinicalTrials_SQL.html     # Databricks HTML export (open in browser)
-│   └── ClinicalTrials_SQL.dbc      # Databricks archive (import into workspace)
+│   ├── clinical_trials_SQL.html     # Databricks HTML export (open in browser)
+│   └── clinical_trials_SQL.dbc      # Databricks archive (import into workspace)
 ├── LICENSE
 └── README.md
 ```
@@ -59,7 +59,7 @@ Open the **HTML file** in any web browser to explore the notebook and results.
 
 ### Option 2: Run in Databricks  
 1. Log in to your Databricks workspace.  
-2. Import `notebooks/ClinicalTrials_SQL.dbc`.  
+2. Import `notebooks/clinical_trials_SQL.dbc`.  
 3. Run the cells to reproduce the analysis.  
 
 ### Clone this repo:  
